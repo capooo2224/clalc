@@ -1,0 +1,155 @@
+.BG{
+    width:  1920px; 
+    height: 1080px;; 
+    object-fit: cover; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: -3; 
+    filter: blur(17.5px);
+}
+
+.lights{
+    border-radius: 1201px;
+    background: radial-gradient(50% 50% at 50% 50%, #dacb90 0%, rgba(0, 0, 0, 0.00) 100%);
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(-78%);
+    z-index: -1;
+}
+
+h1#hed{
+    transform: translateY(-135%);
+    color: rgba(255, 253, 217, 0.60);
+}
+
+.vignette{
+    width: 1920px;
+    height: 1080px;
+    flex-shrink: 0;
+    object-fit: cover; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    background: radial-gradient(2051.64% 53.43% at 48.69% 50%, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+    z-index: -2;
+}
+
+.red{
+    background-color: #B22219;
+    opacity: 0.79;
+    margin: 20px auto;   /* centers it horizontally */
+    display: flex;       /* makes text align nicely */
+    align-items: center; 
+    justify-content: center; 
+    color: white;        /* text color so it’s visible */
+    font-weight: bold;
+    transform: translateY(35%);
+}
+
+.name{
+    background-color: #000;
+    opacity: 0.79;
+    margin: 20px auto;   /* centers it horizontally */
+    display: flex;       /* makes text align nicely */
+    align-items: center; 
+    justify-content: center; 
+    color: white;        /* text color so it’s visible */
+    font-weight: bold;
+    transform: translateY(-3%);
+}
+
+.panel{
+    background-color: #000;
+    opacity: 0.79;
+    margin: 20px auto;   /* centers it horizontally */
+    display: flex;     
+    flex-direction: column;  /* makes text align nicely */
+    align-items: center; 
+    justify-content: center; 
+    color: white;        /* text color so it’s visible */
+    font-weight: bold;
+    transform: translateY(-3%);
+}
+
+/* Input fields */
+input[type="number"],
+input[type="text"] {
+    width: 300px;
+    padding: 8px;
+    margin: 5px 0;
+    border: 2px solid #B22219; /* deep red outline */
+    border-radius: 0;          /* sharp corners */
+    background: rgba(30, 30, 30, 0.85);
+    color: #fff;
+    font-family: "Courier New", monospace; /* monospaced tactical font */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+/* Focus effect */
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #FFD700; /* gold highlight when active */
+    background: rgba(50, 50, 50, 0.9);
+}
+
+/* Submit button */
+button.submit-btn {
+    width: 320px;
+    padding: 14px;
+    margin-top: 15px;
+    border: 2px solid #B22219;
+    border-radius: 0;          /* sharp corners */
+    background: rgba(20, 20, 20, 0.9);
+    color: #fff;
+    font-family: "Courier New", monospace; /* same tactical font */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-transform: uppercase;
+}
+
+/* Hover effect */
+button.submit-btn:hover {
+    border-color: #ff4444;
+    background: rgba(40, 40, 40, 0.95);
+    color: #FFD700;
+}
+
+/* Click/active effect */
+button.submit-btn:active {
+    border-color: #FFD700;
+    background: #B22219;
+    color: #fff;
+}
+
+
+
+.results-box h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.prelim {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff5555;
+}
+
+.requirements {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-left: 10px;
+}
+
+.message {
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}

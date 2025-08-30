@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grades calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Flair.css') }}">
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+    <div class="lights" style="width: 894px; height: 571px; flex-shrink: 0;"></div>
+    <div style="width: 100%; height: 100%; opacity: 0.79; background: #B22219"></div>
+    <div class="BG">
+        <img src="static/BG.png" alt="Background Image">
+    </div>
+    <div class="vignette"></div>
+        <h1 id="hed">Grade calculator</h1>
+    <div class="red" style="width: 874px; height: 39px; flex-shrink: 0;">
+        <p>Information</p>
+    </div>            
+            <div class="name" style="width: 874px; height: 109px; flex-shrink: 0;">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <br><br>
+            </div>
+    <div class="panel" style="width: 875px; height: 462px; flex-shrink: 0;">
+        {% if result is none %}
+        <form method="POST">
+            {% for g in Grades %}
+            <input type="number" step="any" id="{{g}}" name="{{g}}" placeholder="Enter number {{ g }}" required>
+            <br><br>
+            {% endfor %}
+            {% for i in range(1, n_inputsabsent + 1) %}
+            <input type="number" step="any" name="numabsents{{ i }}" placeholder="Enter absent number {{ i }}" required>
+            <br><br>
+            {% endfor %}
+            <button type="submit" class="submit-btn">See..</button>
+        </form>
+
+        {% else %}
+        <div class="results-box">
+            <p class="prelim">Prelim grade: {{ result }}</p>
+            <div class="requirements">
+            <h2>75%_Mark: Mid - {{pasd}} | Final - {{pasd}} </h2>
+            </div>
+            <div class="requirements">
+            <h2>Dean's List Requirements_90%: Mid - {{Dean}} | Final - {{Dean}} </h2>
+            </div>
+            <p class="message">
+            {% if result|float > 80 %}
+                You're cracked my guy
+            {% else %}
+                That's nice :33
+                {%if result|float < 75 %}
+                Dawg..
+                {% endif %}
+            </p>
+            {% endif %}
+        {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>
